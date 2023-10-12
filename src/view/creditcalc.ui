@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CreditCalc</class>
+ <widget class="QDialog" name="CreditCalc">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>360</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(27, 26, 27);
+color:rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>10</y>
+     <width>200</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox {
+	border-radius: 12px;
+	border: 1px solid rgb(255, 114, 0) ;
+}</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QPushButton" name="pushButton_calc1">
+    <property name="geometry">
+     <rect>
+      <x>1</x>
+      <y>1</y>
+      <width>99</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-radius: 11px;
+	color:rgb(255, 114, 0);
+}
+QPushButton:hover{
+	background-color: rgb(71, 70, 71);
+}
+QPushButton:pressed{
+	background-color: rgb(46, 47, 48);
+}</string>
+    </property>
+    <property name="text">
+     <string>SmartCalc</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_calc2">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>0</y>
+      <width>99</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-radius: 12px;
+	background-color: rgb(255, 113, 0);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>CreditCalc</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>320</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(0,0,0,0);</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QLabel" name="label_1">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>20</y>
+      <width>100</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 0)</string>
+    </property>
+    <property name="text">
+     <string>Сумма кредита:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>31</x>
+      <y>50</y>
+      <width>109</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 0)</string>
+    </property>
+    <property name="text">
+     <string>Срок (в месяцах):</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>120</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 0)</string>
+    </property>
+    <property name="text">
+     <string>Процентая ставка:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>110</y>
+      <width>30</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 0)</string>
+    </property>
+    <property name="text">
+     <string>тип:</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>110</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 0)</string>
+    </property>
+    <property name="text">
+     <string>Аннуитетный</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_2">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>130</y>
+      <width>171</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 0)</string>
+    </property>
+    <property name="text">
+     <string>Дифференцированный</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="doubleSpinBox_start">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>20</y>
+      <width>151</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox{
+background-color: rgba(0, 0, 0, 0);
+padding-left: 2px;
+color: white;
+border: 1px solid rgb(255, 114, 0);
+text-color: black; 
+} 
+
+QDoubleSpinBox::up-button {
+subcontrol-origin: margin; 
+subcontrol-position: top right; 
+border: 1px solid rgb(255, 114, 0);
+} 
+
+QDoubleSpinBox::down-button {
+subcontrol-origin: margin; 
+subcontrol-position: bottom right; 
+border: 1px solid rgb(255, 114, 0);
+} 
+
+QDoubleSpinBox::up-arrow { 
+border-left: 3px solid none;
+border-right: 3px solid none; 
+border-bottom: 3px solid rgb(255, 114, 0);
+ width: 0px; 
+height: 0px;
+} 
+
+QDoubleSpinBox::down-arrow { 
+ border-left: 3px solid none;
+border-right: 3px solid none; 
+border-top: 3px solid rgb(255, 114, 0); 
+width: 0px; 
+height: 0px;
+} 
+
+QDoubleSpinBox::up-button:pressed { 
+background-color: rgb(71, 70, 71);
+} 
+
+QDoubleSpinBox::down-button:pressed {
+background-color: rgb(71, 70, 71);
+}
+
+QDoubleSpinBox::up-arrow:pressed { 
+background-color: rgb(71, 70, 71);
+} 
+
+QDoubleSpinBox::down-arrow:pressed {
+background-color: rgb(71, 70, 71);
+}</string>
+    </property>
+    <property name="maximum">
+     <double>1000000000000.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="doubleSpinBox_date">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>50</y>
+      <width>151</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox{
+background-color: rgba(0, 0, 0, 0);
+padding-left: 2px;
+color: white;
+border: 1px solid rgb(255, 114, 0);
+text-color: black; 
+} 
+
+QDoubleSpinBox::up-button {
+subcontrol-origin: margin; 
+subcontrol-position: top right; 
+border: 1px solid rgb(255, 114, 0);
+} 
+
+QDoubleSpinBox::down-button {
+subcontrol-origin: margin; 
+subcontrol-position: bottom right; 
+border: 1px solid rgb(255, 114, 0);
+} 
+
+QDoubleSpinBox::up-arrow { 
+border-left: 3px solid none;
+border-right: 3px solid none; 
+border-bottom: 3px solid rgb(255, 114, 0);
+ width: 0px; 
+height: 0px;
+} 
+
+QDoubleSpinBox::down-arrow { 
+ border-left: 3px solid none;
+border-right: 3px solid none; 
+border-top: 3px solid rgb(255, 114, 0); 
+width: 0px; 
+height: 0px;
+} 
+
+QDoubleSpinBox::up-button:pressed { 
+background-color: rgb(71, 70, 71);
+} 
+
+QDoubleSpinBox::down-button:pressed {
+background-color: rgb(71, 70, 71);
+}
+
+QDoubleSpinBox::up-arrow:pressed { 
+background-color: rgb(71, 70, 71);
+} 
+
+QDoubleSpinBox::down-arrow:pressed {
+background-color: rgb(71, 70, 71);
+}
+</string>
+    </property>
+    <property name="decimals">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <double>1200.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="doubleSpinBox_percent">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>80</y>
+      <width>151</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox{
+background-color: rgba(0, 0, 0, 0);
+padding-left: 2px;
+color: white;
+border: 1px solid rgb(255, 114, 0);
+text-color: black; 
+} 
+
+QDoubleSpinBox::up-button {
+subcontrol-origin: margin; 
+subcontrol-position: top right; 
+border: 1px solid rgb(255, 114, 0);
+} 
+
+QDoubleSpinBox::down-button {
+subcontrol-origin: margin; 
+subcontrol-position: bottom right; 
+border: 1px solid rgb(255, 114, 0);
+} 
+
+QDoubleSpinBox::up-arrow { 
+border-left: 3px solid none;
+border-right: 3px solid none; 
+border-bottom: 3px solid rgb(255, 114, 0);
+ width: 0px; 
+height: 0px;
+} 
+
+QDoubleSpinBox::down-arrow { 
+ border-left: 3px solid none;
+border-right: 3px solid none; 
+border-top: 3px solid rgb(255, 114, 0); 
+width: 0px; 
+height: 0px;
+} 
+
+QDoubleSpinBox::up-button:pressed { 
+background-color: rgb(71, 70, 71);
+} 
+
+QDoubleSpinBox::down-button:pressed {
+background-color: rgb(71, 70, 71);
+}
+
+QDoubleSpinBox::up-arrow:pressed { 
+background-color: rgb(71, 70, 71);
+} 
+
+QDoubleSpinBox::down-arrow:pressed {
+background-color: rgb(71, 70, 71);
+}</string>
+    </property>
+    <property name="maximum">
+     <double>99.000000000000000</double>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>250</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	border: 1px solid rgb(255, 114, 0) ;
+	border-radius: 15px;
+	color:rgb(255, 114, 0);
+}
+QPushButton:hover{
+	background-color: rgb(71, 70, 71);
+}
+QPushButton:pressed{
+	background-color: rgb(46, 47, 48);
+}</string>
+   </property>
+   <property name="text">
+    <string>Расчитать</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>300</y>
+     <width>320</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(0,0,0,0);</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>141</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 0)</string>
+    </property>
+    <property name="text">
+     <string>Ежемесячный платеж:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>152</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 0)</string>
+    </property>
+    <property name="text">
+     <string>Переплата по кредитам:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>80</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 0)</string>
+    </property>
+    <property name="text">
+     <string>Общая выплата:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_month">
+    <property name="geometry">
+     <rect>
+      <x>165</x>
+      <y>20</y>
+      <width>150</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_add">
+    <property name="geometry">
+     <rect>
+      <x>165</x>
+      <y>50</y>
+      <width>150</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_endsum">
+    <property name="geometry">
+     <rect>
+      <x>165</x>
+      <y>80</y>
+      <width>131</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
